@@ -1,11 +1,11 @@
-<div class="container" *ngIf="projects">
-    <div class="card" *ngFor="let project of projects">
+<div class="container" *ngIf="$projects">
+    <div class="card" *ngFor="let project of $projects| async">
         <div class="card-image">
             <!-- img -->
             <!-- placeholder temporary -->
             <p>400 X 300</p>
         </div>
-        <div class="card-title">{{project.projectName}}</div>
+        <div class="card-title">{{project.projName}}</div>
         <!-- commenting description for now-->
         <!-- <div class="card-description"></div> -->
     </div>

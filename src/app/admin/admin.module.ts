@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormsModule } from '@angular/forms';
 import { AdminRoutingModule } from './adminrouting';
+import { FirebaseService } from '../services/firebase.service';
 
 
 
@@ -14,6 +15,7 @@ import { AdminRoutingModule } from './adminrouting';
     CommonModule,
     FormsModule,
     AdminRoutingModule
-  ]
+  ],
+  providers:[FirebaseService]
 })
 export class AdminModule { }

@@ -1,5 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Project } from 'src/app/interface/projectlist.interface';
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Project } from 'src/app/models/project';
+import { FirebaseService } from 'src/app/services/firebase.service';
 
 @Component({
   selector: 'project-list',
@@ -8,11 +10,13 @@ import { Project } from 'src/app/interface/projectlist.interface';
 })
 export class ProjectListComponent implements OnInit {
 
-  @Input() projects !: Project[];
+  $projects !: Observable<Project[]>;
 
-  constructor() { }
+  constructor( private _fs: FirebaseService) { }
 
   ngOnInit(): void {
+    this.$projects = this._fs.projects;
+    // console.log('projects recei')
   }
 
 }

@@ -1,15 +1,15 @@
-<form class="container" ngSubmit="onSubmit()">
+<form class="container" (ngSubmit)="onSubmit()">
     <div>
-        <input class="inputs" type="text" placeholder="title" required>
+        <input name="projName" [(ngModel)] = "projName" class="inputs" type="text" placeholder="title" required>
     </div>
     <div>
-        <textarea class="inputs" name="desc" id="desc" placeholder="description"></textarea>
+        <textarea name="description" [(ngModel)] = "description" class="inputs" name="desc" id="desc" placeholder="description"></textarea>
     </div>
     <div>
-        <input class="inputs" type="file" placeholder="image" >
+        <input [(ngModel)]="img" name="img" class="inputs" type="file" placeholder="image" (change)="uploadFile($event)">
     </div>
     <div>
-        <input class="inputs" type="text" placeholder="tags">
+        <input name="tag" [(ngModel)] = "tag" class="inputs" type="text" placeholder="tags">
     </div>
 
     <button type="submit">Submit</button>

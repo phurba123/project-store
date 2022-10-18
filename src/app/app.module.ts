@@ -7,6 +7,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { NavComponent } from './component/nav/nav.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { HomeComponent } from './component/home/home.component';
+import { environment } from '../environments/environment';
+import { FirebaseService } from './services/firebase.service';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireStorageModule, BUCKET  } from '@angular/fire/compat/storage';
 
 @NgModule({
   declarations: [
@@ -18,9 +23,15 @@ import { HomeComponent } from './component/home/home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // provideFirebaseApp(() => initializeApp(environment.firebase)),
+    // provideFirestore(() => getFirestore()),
+    // provideStorage(() => getStorage()),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule.enablePersistence(),
+    AngularFireStorageModule,
   ],
-  providers: [],
+  providers: [ FirebaseService,  { provide: BUCKET, useValue: 'img-bucket' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

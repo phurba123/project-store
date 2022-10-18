@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "project-store-d3651": {
+      "hosting": {
+        "projects_store": [
+          "project-store-d3651"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "project-store-d3651"
+  }
+}
