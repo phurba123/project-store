@@ -1,0 +1,5 @@
+.project-list {
+    padding: 8px 0;
+    width: var(--container-width);
+    margin: auto;
+}

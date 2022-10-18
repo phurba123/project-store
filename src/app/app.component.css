@@ -1,0 +1,19 @@
+/* store-footer {
+    position: relative;
+    top: 90vh;
+} */
+
+.main {
+    background-color: var(--sandDollar);
+    color: #000;
+}
+
+.main.dark {
+    background-color: var(--darkblue);
+    color: #fff;
+}
+
+.nav-section {
+    height: 10vh;
+    
+}
