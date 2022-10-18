@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'projects_store';
-  isDarkMode: boolean = false;
+  isDarkMode: boolean = true;
 
   onSwitchMode(isDark: boolean): void {
     this.isDarkMode = isDark;

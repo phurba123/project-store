@@ -17,3 +17,8 @@
     height: 10vh;
     
 }
+.content { 
+    height: 90vh;
+    overflow: auto;
+    padding: var(--padding-y) var(--padding-x);
+}

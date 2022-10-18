@@ -6,7 +6,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-  isDark: boolean = false;
+  isDark!: boolean;
 
   @Output() changeModeEvent: EventEmitter<boolean> = new EventEmitter();
 

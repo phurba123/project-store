@@ -1,0 +1,12 @@
+.container {
+    border: 1px dashed red;
+    display: flex;
+    flex-wrap: wrap;
+    padding: var(--padding-y) var(--padding-x);
+    column-gap: var(--padding-x);
+    align-items: center;
+}
+
+.inputs {
+    padding: var(--padding-y) var(--padding-x);
+}

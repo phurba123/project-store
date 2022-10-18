@@ -9,6 +9,8 @@ import { Project } from 'src/app/interface/projectlist.interface';
 
 export class HomeComponent implements OnInit {
 
+  welcomeText: string = "welcome to my project store";
+
   projectList : Project[] =[
     {
       id:'1',
