@@ -1,4 +1,4 @@
-.container {
+.container-form {
     border: 1px dashed red;
     display: flex;
     flex-wrap: wrap;
@@ -9,4 +9,21 @@
 
 .inputs {
     padding: var(--padding-y) var(--padding-x);
+}
+
+.data-container {
+    display: flex;
+    overflow: auto;
+    margin: var(--margin-y) auto;
+    padding: var(--padding-y);
+}
+
+.data-container div {
+    border: 1px solid gray;
+    padding: var(--padding-y);
+}
+
+.data-section {
+    max-height: 80%;
+    overflow: auto;
 }

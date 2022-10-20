@@ -5,4 +5,5 @@ export interface Project {
     creator: string,
     tags: string[],
     imgUrl?: any,
+    projLinks?: string
 }

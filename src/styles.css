@@ -6,8 +6,10 @@
     --red: #db1f48;
     --padding-y: 10px;
     --padding-x: 15px;
+    --padding-big: 80px;
     --margin-y: 10px;
     --margin-x: 15px;
+    --margin-big: 80px;
     --container-width: 70%;
     --br: 4px;
 }

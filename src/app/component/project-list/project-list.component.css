@@ -13,6 +13,7 @@
     height: 300px;
     border: 1px solid gray;
     padding: 3px 5px;
+    border-radius: var(--br);
 }
 
 .card .card-image {
@@ -28,4 +29,8 @@
     text-align: center;
     text-transform: capitalize;
     /* background-color: var(--teal); */
+}
+
+.card-image img {
+    width: 100%;
 }

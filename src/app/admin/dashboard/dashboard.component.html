@@ -1,4 +1,4 @@
-<form class="container" (ngSubmit)="onSubmit()">
+<form class="container-form" (ngSubmit)="onSubmit()">
     <div>
         <input name="projName" [(ngModel)] = "projName" class="inputs" type="text" placeholder="title" required>
     </div>
@@ -11,6 +11,35 @@
     <div>
         <input name="tag" [(ngModel)] = "tag" class="inputs" type="text" placeholder="tags">
     </div>
+    <div>
+        <input class="inputs" type="text" [(ngModel)]="projLink" name="projLink" placeholder="project link">
+    </div>
 
     <button type="submit">Submit</button>
 </form>
+
+<!-- showing list of projects data -->
+<div *ngIf="allProjects$| async" class="data-section">
+    <div class="data-container" *ngFor="let project of allProjects$ | async">
+        <div>
+            <p>
+                <span>Proj name : </span> {{project.projName}}
+            </p>
+        </div>
+        <div>
+            <p>
+                <span>Description : {{project.description}}</span>
+            </p>
+        </div>
+        <div>
+            <p>
+                <span>Tags : {{project.tags | json}}</span>
+            </p>
+        </div>
+        <div class="actions">
+            <button>Edit</button>
+            <button>Delete</button>
+        </div>
+    </div>
+<div>
+

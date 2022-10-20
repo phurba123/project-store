@@ -1,12 +1,15 @@
 <div class="container" *ngIf="$projects">
-    <div class="card" *ngFor="let project of $projects| async">
-        <div class="card-image">
-            <!-- img -->
-            <!-- placeholder temporary -->
-            <p>400 X 300</p>
+    <a [href]="project.projLinks? project.projLinks: ''" *ngFor="let project of $projects| async" target="_blank">
+        <div class="card">
+            <div class="card-image">
+                <!-- img -->
+                <!-- placeholder temporary -->
+                <img *ngIf="project.imgUrl" [src]="project.imgUrl" alt="image">
+                <p *ngIf="!project.imgUrl">No Image</p>
+            </div>
+            <div class="card-title">{{project.projName}}</div>
+            <!-- commenting description for now-->
+            <!-- <div class="card-description"></div> -->
         </div>
-        <div class="card-title">{{project.projName}}</div>
-        <!-- commenting description for now-->
-        <!-- <div class="card-description"></div> -->
-    </div>
+    </a>
 </div>

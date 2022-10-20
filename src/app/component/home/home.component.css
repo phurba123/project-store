@@ -1,7 +1,7 @@
 .project-list {
-    padding: 8px 0;
+    padding: var(--padding-y) 0;
     width: var(--container-width);
-    margin: auto;
+    margin: var(--margin-big) auto;
 }
 
 .main {

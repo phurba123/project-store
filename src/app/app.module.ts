@@ -12,6 +12,7 @@ import { FirebaseService } from './services/firebase.service';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireStorageModule, BUCKET  } from '@angular/fire/compat/storage';
+import { ProjectViewComponent } from './project-view/project-view.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AngularFireStorageModule, BUCKET  } from '@angular/fire/compat/storage'
     ProjectListComponent,
     NavComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    ProjectViewComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,7 @@ import { AngularFireStorageModule, BUCKET  } from '@angular/fire/compat/storage'
     AngularFirestoreModule.enablePersistence(),
     AngularFireStorageModule,
   ],
-  providers: [ FirebaseService,  { provide: BUCKET, useValue: 'img-bucket' }],
+  providers: [ FirebaseService,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -15,7 +15,7 @@ export class ProjectListComponent implements OnInit {
   constructor( private _fs: FirebaseService) { }
 
   ngOnInit(): void {
-    this.$projects = this._fs.projects;
+     this.$projects = this._fs.projects;
     // console.log('projects recei')
   }
 

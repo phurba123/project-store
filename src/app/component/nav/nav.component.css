@@ -12,3 +12,7 @@ header div {
 header nav {
     /* border: 2px solid green; */
 }
+
+.brand-name {
+    cursor:pointer;
+}
